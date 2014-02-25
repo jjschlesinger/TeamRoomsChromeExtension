@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <link href="Content/popup.css" rel="stylesheet" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/popup.js"></script>
+</head>
+<body ng-controller="RoomNotificationsCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="room in rooms">
+                        {{room.name}} <button type="button" class="btn btn-xs btn-primary">{{room.newMessages}}</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
